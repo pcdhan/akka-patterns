@@ -8,7 +8,7 @@
     
     
 The following logs is from Remote Actor:
-and clearly it does not have sender actor reference as it prints temp/$b
+and clearly it does not have sender actor reference as it prints temp/$c
 
 ```bash
 ...
