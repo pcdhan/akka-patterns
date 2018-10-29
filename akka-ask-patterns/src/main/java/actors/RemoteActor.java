@@ -45,12 +45,12 @@ public class RemoteActor extends AbstractActor {
         }).match(String.class, message -> {
             Long payload = Long.valueOf(message);
             payload = payload + 1;
-            log.info("I am " + getSelf() + ", To " + getSender() + ", Payload: " + payload);
+            log.info("I am " + getSelf() + ", To " + getSender() + ", String Payload: " + payload);
             getSender().tell(payload, getSelf());
         }).match(Payload.class, payload -> {
             Long p = Long.valueOf(payload.getMsg());
             p = p + 1;
-            log.info("I am " + getSelf() + ", To " + getSender() + ", Payload: " + payload.getMsg());
+            log.info("I am " + getSelf() + ", To " + getSender() + ", Object Payload: " + payload.getMsg());
             payload.setMsg(String.valueOf(p));
             getSender().tell(payload, getSelf());
 
