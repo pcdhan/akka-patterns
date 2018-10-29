@@ -43,7 +43,7 @@ public class LocalApp {
 
         //Example:askWithReplyTo
         //If we want to include sender reference in the payload
-        //Need help !!  I am unable to pass a sender ActorRef Eg. localA in the payload
+        //Need help !!  How do pass a sender ActorRef Eg. localA in the payload
         Payload payload = new Payload();
         payload.setMsg("0");
         Future<Object> askWithSenderRef = Patterns.askWithReplyTo(actorRef,payload,20000L);
